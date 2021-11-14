@@ -1,95 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
-  maximum-scale=5"
-    />
 
-    <link rel="icon" href="devchallenges.png" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <link rel="icon" href="devchallenges.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Devchallenges</title>
+</head>
 
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://devchallenges.io/"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Devchallenges</title>
-
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
-
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
-      </div>
-
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
+<body>
+  <h1 class="button-title">Buttons</h1>
+  <div class="block">
+    <div>
+      <span>Button</span><br>
+      <button class="btn default">Default</button>
     </div>
-  </body>
+    <div>
+      <span>&:hover, &:focus</span><br>
+      <button class="btn default default--is-actived">Default</button>
+    </div>
+  </div>
+
+  <div class="block">
+    <div>
+      <span>Outline</span><br>
+      <button class="btn outline">Default</button>
+    </div>
+    <div>
+      <span>&:hover, &:focus</span><br>
+      <button class="btn outline outline--is-actived">Default</button>
+    </div>
+  </div>
+
+  <div class="block">
+    <div>
+      <span>Text</span><br>
+      <button class="text">Default</button>
+    </div>
+    <div>
+      <span>&:hover, &:focus</span><br>
+      <button class="text text--is-actived">Default</button>
+    </div>
+  </div>
+
+  <div>
+    <span>disable shadow</span><br>
+    <button class="btn disable_shadow">Default</button>
+  </div>
+
+  <div class="block">
+    <div>
+      <span>Disabled</span><br>
+      <button class="btn disabled">Disabled</button>
+    </div>
+    <div>
+      <span>Text</span><br>
+      <span class="text-disabled">Disabled</span><br>
+    </div>
+  </div>
+  
+  <div class="block">
+    <div>
+      <span>Store icon start</span><br>
+      <button class="btn md primary store store_start">Default</button>
+    </div>
+    <div>
+      <span>Store icon end</span><br>
+      <button class="btn md primary store store_end">Default</button>
+    </div>
+  </div>
+
+  <div class="block">
+    <div>
+      <span>sm</span><br>
+      <button class="btn sm primary">Default</button>
+    </div>
+    <div>
+      <span>md</span><br>
+      <button class="btn md primary">Default</button>
+    </div>
+    <div>
+      <span>lg</span><br>
+      <button class="btn lg primary">Default</button>
+    </div>
+  </div>
+
+  <div class="block">
+    <div>
+      <span>default</span><br>
+      <button class="btn md default">Default</button>
+    </div>
+
+    <div>
+      <span>primary</span><br>
+      <button class="btn md primary">Default</button>
+    </div>
+    <div>
+      <span>secondary</span><br>
+      <button class="btn md secondary">Secondary</button>
+    </div>
+  </div>
+
+  <div class="block">
+    <div>
+      <span>&:hover, &:focus</span><br>
+      <button class="btn md default default--is-actived">Default</button>
+    </div>
+    <div>
+      <br>
+      <button class="btn md primary primary--is-actived">Default</button>
+    </div>
+    <div>
+      <br>
+      <button class="btn md secondary secondary--is-actived">Secondary</button>
+    </div>
+  </div>
+</body>
+
 </html>
