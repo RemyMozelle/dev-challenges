@@ -11,7 +11,8 @@
 header {
     display: flex;
     justify-content: space-between;
-    padding-top: 19px;
+    align-items: center;
+    padding-top: 19px !important;
 }
 
 p {
@@ -72,6 +73,11 @@ footer {
     letter-spacing: 0em;
     text-align: left;
     margin-bottom: 32px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #333333;
 }
 
 .logo-text {
@@ -500,6 +506,7 @@ input::placeholder {
 
     header {
         padding-top: 42px !important;
+
     }
 
     .container {
@@ -660,6 +667,11 @@ input::placeholder {
 }
 
 @media screen and (min-width: 1366px) {
+
+    header {
+        align-items: baseline;
+    }
+
     .designs-block {
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 3%;
