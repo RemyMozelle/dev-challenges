@@ -24,16 +24,17 @@
       </button>
       <button type="button" class="btn-close">x</button>
       <ul id="menu">
-        <li class="menu-item"><a href="#">Home</a></li>
-        <li class="menu-item"><a href="#">Collection</a></li>
-        <li class="menu-item"><a href="#">About</a></li>
-        <li class="menu-item"><a href="#">Contact</a></li>
+        <li class="menu-item"><a href="#home">Home</a></li>
+        <li class="menu-item"><a href="#services">Services</a></li>
+        <li class="menu-item"><a href="#our-works">Our works</a></li>
+        <li class="menu-item"><a href="#clients">Clients</a></li>
+        <li class="menu-item"><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="container">
-    <div class="intro">
+    <div class="intro" id="home">
       <p class="intro-first">Unhappy with your website?</p>
       <p class="intro-second">We create beautiful <br /> and fast web services</p>
     </div>
@@ -51,7 +52,7 @@
       </form>
     </div>
     <div class="formations">
-      <h2 class="formations-title">We offer high demand services</h2>
+      <h2 class="formations-title" id="services">We offer high demand services</h2>
       <div class="formations-block">
         <div class="formations-item">
           <span class="material-icons formations-icon bg-blue">edit</span>
@@ -77,7 +78,7 @@
       </div>
     </div>
     <div class="designs">
-      <h3 class="designs-title">Good design means good business</h3>
+      <h3 class="designs-title" id="our-works">Good design means good business</h3>
       <div class="designs-block">
         <div class="designs-item">
           <img src="src/images/smarthome.jpg" alt="">
@@ -115,7 +116,7 @@
       </div>
     </div>
     <div class="testimonial">
-      <p class="testimonial-title">“Fast and outstanding resutls. Edie understands their customer’s needs. They have a
+      <p class="testimonial-title" id="clients">“Fast and outstanding resutls. Edie understands their customer’s needs. They have a
         young and talented team.”</p>
       <div class="testimonial-card">
         <img class="testimonial-card-image" src="src/images/person4.png" alt="">
@@ -129,11 +130,11 @@
     <div class="footer-block">
       <div class="footer-block-menu">
         <ul>
-          <li>Home</li>
-          <li>Services</li>
-          <li>Our Works</li>
-          <li>Clients</li>
-          <li>Contact</li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#our-works">Our Works</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#contacts">Contact</a></li>
         </ul>
       </div>
       <div class="footer-block-social">
@@ -146,7 +147,7 @@
       </div>
       <div class="footer-block-contact">
         <form method="post" class="contact">
-          <h1 class="contact-title">Want us to contact you?</h1>
+          <h1 class="contact-title" id="contact">Want us to contact you?</h1>
           <div class="contact-element">
             <input type="text" value="" placeholder="Email">
             <button class="contact-btn" type="submit">Join</button>
