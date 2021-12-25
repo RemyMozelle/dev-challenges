@@ -46,14 +46,13 @@ function App() {
 
         {/* Base input with size */}
         <div className="inputs-container">
-          <Input label="Bonjour 1" size="sm" />
+        <Input label="Bonjour 1" size="sm" />
+        <Input label="Bonjour 1" size="sm" error />
           <Input label="Bonjour 1" size="md" />
         </div>
 
         {/* Base input Full width */}
-        <div className="inputs-container">
-          <Input label="Bonjour 1" fullWidth />
-        </div>
+        <Input label="Bonjour 1" fullWidth />
 
         {/* Base input multiline */}
         <div className="inputs-container">

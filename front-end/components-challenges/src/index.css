@@ -13,6 +13,7 @@
   display: flex;
   justify-content: flex-start;
   margin: 50px 0;
+  column-gap: 70px;
 }
 
 .input {
@@ -20,7 +21,7 @@
   border-radius: 8px;
   font-family: 'Noto Sans', sans-serif;
   display: inline-flex;
-  padding: 18px 12px;
+  /* padding: 18px 12px; */
   align-items: center;
 }
 
@@ -31,6 +32,16 @@
   font-family: 'Noto Sans', sans-serif;
   border: none;
   background-color: transparent;
+}
+
+.input-field-md {
+  height: 56px;
+  padding-left: 12px;
+}
+
+.input-field-sm {
+  height: 40px;
+  padding-left: 12px;
 }
 
 .input::placeholder {
@@ -70,12 +81,8 @@
   border: 1px solid #E0E0E0;
 }
 
-.input-sm {
-  height: 40px;
-}
-
-.input-md {
-  height: 56px;
+.fullWidth {
+  width: 100%;
 }
 
 .input-multiline {
@@ -84,7 +91,7 @@
   border-radius: 8px;
   font-family: 'Noto Sans', sans-serif;
   display: inline-flex;
-  padding: 18px 12px;
+  /* padding: 18px 12px; */
   align-items: center;
 }
 
@@ -126,17 +133,22 @@
   font-size: 10px;
   font-family: 'Noto Sans', sans-serif;
   color:#828282;
+  padding-top: 4px;
 }
 
 .helper-text-error {
   color: #D32F2F;
 }
 
+.input-field-icon-left,  .input-field-icon-right{
+  width: calc(200px - 38px);
+}
+
 .input-icon-left::before {
   content: attr(data-icon);
   font-family: 'Material Icons';
   font-size: 24px;
-  margin-right: 15px;
+  margin-left: 12px;
   color: #828282;
 }
 
@@ -144,6 +156,6 @@
   content: attr(data-icon);
   font-family: 'Material Icons';
   font-size: 24px;
-  margin-left: 15px;
+  margin-right: 12px;
   color: #828282;
 }

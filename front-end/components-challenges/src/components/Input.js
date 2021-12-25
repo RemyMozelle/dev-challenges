@@ -9,10 +9,11 @@ let defaultProps = {
     endIcon: '',
     size: 'md',
     multiline: false,
+    fullWidth: false,
     rows: '',
 }
 
-function Input({ label, error, disabled, helperText, startIcon, endIcon, size, multiline, rows, attributes }) {
+function Input({ label, error, disabled, helperText, startIcon, endIcon, size, multiline, rows, attributes, fullWidth }) {
 
     function giveCorrectClassNames(prefixClass) {
         let classNames = prefixClass + ' ';
@@ -30,18 +31,22 @@ function Input({ label, error, disabled, helperText, startIcon, endIcon, size, m
         }
 
         if (disabled === true) {
-            classNames += prefixClass + '-disabled'
+            classNames += prefixClass + '-disabled';
         }
 
         if (size) {
-            classNames += ' ' + prefixClass + '-' + size
+            classNames += ' ' + prefixClass + '-' + size;
+        }
+
+        if (fullWidth === true) {
+            classNames += ' fullWidth';
         }
 
         return classNames;
     }
 
     return (
-        <div className="input-container">
+        <div className={fullWidth ? 'input-container fullWidth' : 'input-container'}>
             <label className={giveCorrectClassNames('label')}>{label}</label>
 
             {multiline === true ? (
