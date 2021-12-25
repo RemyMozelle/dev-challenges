@@ -1,0 +1,17 @@
+.menu {
+    background-color: #FAFBFD;
+    padding-top: 40px;
+}
+
+.menu-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.menu-title-orange {
+    color: #F7542E;
+}

@@ -1,13 +1,149 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.input-container {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.inputs-container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 50px 0;
+}
+
+.input {
+  border: 1px solid #828282;
+  border-radius: 8px;
+  font-family: 'Noto Sans', sans-serif;
+  display: inline-flex;
+  padding: 18px 12px;
+  align-items: center;
+}
+
+.input-field {
+  width: 200px;
+  font-size: 14px;
+  outline: none;
+  font-family: 'Noto Sans', sans-serif;
+  border: none;
+  background-color: transparent;
+}
+
+.input::placeholder {
+  color: #828282
+}
+
+.input.input:hover {
+  border: 1px solid #333333;
+}
+
+.input:focus-within {
+  border: 1px solid #2962FF;
+}
+
+.input-error {
+  border: 1px solid #D32F2F;
+}
+
+.input-error.input:focus-within {
+  border: 1px solid #D32F2F;
+}
+
+.input-error.input:hover {
+  border: 1px solid #333333;
+}
+
+.input:disabled {
+  border: none;
+}
+
+.input.input-disabled {
+  background-color: #F2F2F2;
+  border: 1px solid #E0E0E0;
+}
+
+.input.input-disabled:hover {
+  border: 1px solid #E0E0E0;
+}
+
+.input-sm {
+  height: 40px;
+}
+
+.input-md {
+  height: 56px;
+}
+
+.input-multiline {
+  height: auto;
+  border: 1px solid #828282;
+  border-radius: 8px;
+  font-family: 'Noto Sans', sans-serif;
+  display: inline-flex;
+  padding: 18px 12px;
+  align-items: center;
+}
+
+.input-multiline.input-multiline:hover {
+  border: 1px solid #333333;
+}
+
+.input-multiline:focus-within {
+  border: 1px solid #2962FF;
+}
+
+.input-multiline-error {
+  border: 1px solid #D32F2F;
+}
+
+.input-multiline-error.input-multiline:focus-within {
+  border: 1px solid #D32F2F;
+}
+
+.input-field-multiline {
+  width: 200px;
+  font-size: 14px;
+  outline: none;
+  font-family: 'Noto Sans', sans-serif;
+  border: none;
+  background-color: transparent;
+}
+
+.label {
+  font-family: 'Noto Sans', sans-serif;
+  margin-bottom: 0.25rem;
+}
+
+.label-error {
+  color: #D32F2F;
+}
+
+.helper-text {
+  font-size: 10px;
+  font-family: 'Noto Sans', sans-serif;
+  color:#828282;
+}
+
+.helper-text-error {
+  color: #D32F2F;
+}
+
+.input-icon-left::before {
+  content: attr(data-icon);
+  font-family: 'Material Icons';
+  font-size: 24px;
+  margin-right: 15px;
+  color: #828282;
+}
+
+.input-icon-right::after {
+  content: attr(data-icon);
+  font-family: 'Material Icons';
+  font-size: 24px;
+  margin-left: 15px;
+  color: #828282;
 }
