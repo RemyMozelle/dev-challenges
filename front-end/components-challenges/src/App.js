@@ -41,7 +41,7 @@ function App() {
 
         {/* TODO: Base input value */}
         <div className="inputs-container">
-          <Input label="Bonjour 1" />
+          <Input label="Bonjour 1" value="test" />
         </div>
 
         {/* Base input with size */}
@@ -56,7 +56,7 @@ function App() {
 
         {/* Base input multiline */}
         <div className="inputs-container">
-          <Input label="Bonjour 1" multiline rows="5" />
+          <Input label="Bonjour 1" multiline rows="5" placeholder="loutre"/>
           <Input label="Bonjour 1" multiline rows="5" error />
           <Input label="Bonjour 1" multiline rows="5" />
           <Input label="Bonjour 1" multiline rows="5" error />

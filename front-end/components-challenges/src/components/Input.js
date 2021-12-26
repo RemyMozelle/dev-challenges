@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-let defaultProps = {
+const defaultProps = {
     label: 'Label',
     error: false,
     disabled: false,
@@ -11,9 +11,17 @@ let defaultProps = {
     multiline: false,
     fullWidth: false,
     rows: '',
+    placeholder: '',
+    value: '',
 }
 
-function Input({ label, error, disabled, helperText, startIcon, endIcon, size, multiline, rows, attributes, fullWidth }) {
+function Input({ label, placeholder, error, disabled, helperText, startIcon, endIcon, value, size, multiline, rows, attributes, fullWidth }) {
+
+    const [state, setState] = useState(value);
+
+    const handleChange = event => {
+        setState(event.target.value);
+    }
 
     function giveCorrectClassNames(prefixClass) {
         let classNames = prefixClass + ' ';
@@ -51,12 +59,26 @@ function Input({ label, error, disabled, helperText, startIcon, endIcon, size, m
 
             {multiline === true ? (
                 <div className={giveCorrectClassNames('input-multiline')} data-icon={startIcon || endIcon}>
-                    <textarea {...attributes} className={giveCorrectClassNames('input-field-multiline')} rows={rows}></textarea>
+                    <textarea {...attributes}
+                        onChange={handleChange}
+                        className={giveCorrectClassNames('input-field-multiline')}
+                        placeholder={placeholder}
+                        rows={rows}
+                        disabled={disabled}
+                        defaultValue={state}
+                    ></textarea>
                 </div>
             ) :
                 (
                     <div className={giveCorrectClassNames('input')} data-icon={startIcon || endIcon}>
-                        <input {...attributes} className={giveCorrectClassNames('input-field')} type="text" placeholder="Placeholder" disabled={disabled} />
+                        <input {...attributes}
+                            onChange={handleChange}
+                            placeholder={placeholder}
+                            className={giveCorrectClassNames('input-field')}
+                            type="text"
+                            disabled={disabled}
+                            value={state}
+                        />
                     </div>
                 )
             }
